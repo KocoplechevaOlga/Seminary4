@@ -5,15 +5,15 @@
 int CountNumber (int number)
 {
     int count = default;
-    while(number % 10 > 0)
+    for (count = 0; number % 10 > 0; count++)
     {
-        count = count + 1;
         number = number / 10;
     }
     return count;
 }
 Console.WriteLine("Введите целое положительное число: ");
 int n = Convert.ToInt32(Console.ReadLine());
+
 if (n >= 0)
 {
     int c = CountNumber(n);
